@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React , { Component }from 'react';
+import axios from 'axios';
+import SingleProfile from './Component/SingleProfile'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  state = {
+    displays: {
+      name:'',
+      id:'',
+    }
+  }
+  componentDidMount() {
+    axios.get(`https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json`)
+    .then( displays => {
+      this.setState({ displays: displays.data.Brastlewark})
+      // console.log(displays.data)
+      // console.log(displays.data.Brastlewark)
+      // console.log(displays.data.Brastlewark[0].name)
+
+    })
+  }
+  render() {
+    return (
+      <div>
+        <header>
+         <h1>HybirdApp</h1>
+         <input type="text" placeholder="Name"/>
+         <button> Search </button>
+         <button> More detials </button>
+         <SingleProfile display={this.state.displays}/>
+        
+      
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
