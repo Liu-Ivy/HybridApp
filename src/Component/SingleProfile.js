@@ -1,12 +1,12 @@
 import React from 'react'
 
 function SingleProfile(props) {
-  const [{id, name}] = props.display
+  const { name, thumbnail } = props.display
   // console.log(props)
   return (
   <div>
-      <h2>{id}</h2> 
-      <h2>{name}</h2>
+      <p>{name}</p>
+      <img src={thumbnail} alt="" style={{ height:"50px", width:"50px"}}/> 
     </div>
   )
 }
