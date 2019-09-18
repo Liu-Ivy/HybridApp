@@ -19,11 +19,11 @@ class Home extends Component {
     })
   }
 
-  handleClick = () => {
-    // this.setState({ filteredProfile: this.state.filterProfile[0]});
-    this.setState({ filteredProfile: this.state.filterProfile});
-    console.log(this.state.filteredProfile)
+  handleClick = (gnome) => {
+    // this.setState({ displays: display.data.Brastlewark});
+    console.log(gnome)
   }
+
   handleSearchBar = (input)=>{
     this.setState({newInput: input})
   }
@@ -51,8 +51,11 @@ class Home extends Component {
          {/* <button> Search </button> */}
          {/* <button> More detials </button> */}
          {filteredDisplays.map( gnome => 
-            <SingleProfile display={gnome} key={gnome.id} handleClick={this.handleClick}/>
+            <SingleProfile display={gnome} key={gnome.id} handleClick={()=>{this.handleClick(gnome)}}/>
          )}
+         {/* {this.state.displays.map( gnome => 
+            <Profile display={gnome} key={gnome.id}/>
+         )} */}
         </header>
       </div>
     )
