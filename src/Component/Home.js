@@ -28,13 +28,6 @@ class Home extends Component {
     this.setState({newInput: input})
   }
 
-  // componentDidUpdate() {
-  //   axios.get(`https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json/search?q=${this.state.query}`)
-  //   .then( display => {
-  //     this.setState({displays: display.data.Brastlewark})
-  //   })
-  // }
-
   render() {
     let filteredDisplays = this.state.displays.filter(
       (display)=>{
