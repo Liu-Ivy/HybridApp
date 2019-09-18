@@ -21,12 +21,15 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.state.displays)
     let filteredDisplays = this.state.displays.filter(
-        (display)=>{
-          return display.name.indexOf(this.state.newInput) !== 1;
-        }
-    );
+      (display)=>{
+        return display.name.includes(this.state.newInput) !== 1;
+      }
+      );
+
+    // const { displays } = this.state
+    // displays ? console.log(displays[0].name) : null
+
     return (
       <div>
       <header>

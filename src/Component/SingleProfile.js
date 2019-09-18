@@ -2,7 +2,6 @@ import React from 'react'
 
 function SingleProfile(props) {
   const { name, thumbnail } = props.display
-  // console.log(props)
   return (
   <div>
       <p>{name}</p>

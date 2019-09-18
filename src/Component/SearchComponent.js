@@ -8,13 +8,15 @@ class SearchComponent extends Component {
   handleSearchBar = (event) => {
     const newInput = event.target.value;
     this.props.searchInput(newInput);
-    this.setState({ inputSearch: event.target.value })
+    this.setState({ inputSearch: newInput })
   }
   
   render() {
     return (
       <div>
-      <input type="text" placeholder="Name" value={this.state.inputSearch} onChange={this.handleSearchBar}/>
+      <input type="text" placeholder="Name" 
+        value={this.state.inputSearch} 
+        onChange={this.handleSearchBar}/>
      </div>
     )
   }
