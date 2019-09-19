@@ -3,8 +3,9 @@
 
 header {
 	width: 100%;
-	background: rgb(70, 82, 87);
+	background: rgb(63, 114, 136);
 	@include flexCenter(row);
+	align-items: center;
 	padding-bottom: 20px;
 	margin-bottom: 2px;
 

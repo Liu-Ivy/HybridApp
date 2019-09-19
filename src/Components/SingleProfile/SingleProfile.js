@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./SingleProfile.scss";
 
 function SingleProfile(props) {
-  const { name, thumbnail, age, professions } = props.gnome;
+  const { name, thumbnail, age, professions, friends } = props.gnome;
   const [showInfo, setShowInfo] = useState(false);
 
   return (
@@ -13,17 +13,21 @@ function SingleProfile(props) {
       </div>
       {showInfo ? (
         <div className="gnome-info">
-          <div className="gnome-age">
+          <div className="age-box">
             <h3>Age</h3>
             <p>{age}</p>
           </div>
-          <div className="profession">
-            <h3 className="profession-title">Professions:</h3>
-            <div>
+          <div className="professions-box">
+            <h3>Professions</h3>
             {professions.map((profession, i) => (
-              <p className="profession-content" key={i}>{profession}</p>
+              <p key={i}>{profession}</p>
             ))}
-            </div>
+          </div>
+          <div className="friends-box">
+            <h3>Friends</h3>
+            {friends.map((profession, i) => (
+              <p key={i}>{friends}</p>
+            ))}
           </div>
           
         </div>

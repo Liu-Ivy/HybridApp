@@ -22,7 +22,7 @@ function HomeComponent() {
         "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
       )
       .then(display => {
-        setDisplays(display.data.Brastlewark.splice(0, 29));
+        setDisplays(display.data.Brastlewark.splice(3, 33));
         setIsloading(false);
       });
   }, []);
