@@ -2,14 +2,22 @@
 @import "./gnomeContainer";
 
 header {
-	width: 100%;
-	background: rgb(63, 114, 136);
-	@include flexCenter(row);
-	align-items: center;
-	padding-bottom: 20px;
-	margin-bottom: 2px;
+  width: 100%;
+  background: rgba(41, 35, 35, 0.89);
+  @include flexCenter(column);
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 2px;
 
-	h1 {
-		color: $textColor;
-	}
+  .searching-field {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+  }
+
+  h1 {
+    color: rgb(201, 189, 189);
+  }
 }

@@ -1,21 +1,37 @@
-@import '../variables';
+@import "../variables";
 
 .gnome-container {
-	background-size: cover;
-	background-repeat: no-repeat;
-	opacity: 0.8;
-	height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  height: 200px;
   padding: 0;
-  
-	.whiteBar-text {
+
+  .whiteBar-text {
     width: 100%;
-    text-align: center;
-		position: absolute;
-		z-index: 1000;
-		color: $textColor;
-    padding: 1em 0 1em 7em;
-    margin: 9.3em 0 0 0;
-    background-color: rgba(0,0,0,.5);
-    font-size: 1em;
-	}
+    height: 40px;
+    @include flexCenter(row);
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    color: $textColor;
+    padding: 1em 20em 1em 0;
+    margin: 8em 0 0 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  span {
+    font-size: 10px;
+  }
+}
+.single-profile {
+  img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  &:hover img {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
 }

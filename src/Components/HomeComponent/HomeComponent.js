@@ -48,7 +48,7 @@ function HomeComponent() {
     <div>
       <header>
         <h1>HybridApp</h1>
-        <SearchComponent searchInput={setNewInput} />
+        <SearchComponent className="search-field" searchInput={setNewInput} />
       </header>
       <div className="gnome-container">
         {isLoading ? (

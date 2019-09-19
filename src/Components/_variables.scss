@@ -2,7 +2,7 @@ $textColor: rgb(201, 189, 189);
 
 @mixin flexCenter($direction) {
   display: flex;
-	justify-content: space-around;
+  justify-content: space-evenly;
   // align-items: center;
-  flex-direction:$direction; 
+  flex-direction: $direction;
 }
