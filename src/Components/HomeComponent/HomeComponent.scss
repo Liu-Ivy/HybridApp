@@ -1,0 +1,14 @@
+@import "../variables";
+@import "./gnomeContainer";
+
+header {
+	width: 100%;
+	background: rgb(70, 82, 87);
+	@include flexCenter(row);
+	padding-bottom: 20px;
+	margin-bottom: 2px;
+
+	h1 {
+		color: $textColor;
+	}
+}

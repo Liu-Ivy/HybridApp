@@ -8,16 +8,24 @@ function SingleProfile(props) {
   return (
     <>
       <div onClick={() => setShowInfo(!showInfo)}>
-        <p>{name}</p>
+        <p className="whiteBar-text">{name}</p>
         <img className="gnome-img" src={thumbnail} alt="" />
       </div>
       {showInfo ? (
-        <div>
-          <h2>Age: {age}</h2>
-          <h3>Professions:</h3>
-          {professions.map((profession, i) => (
-            <p key={i}>{profession}</p>
-          ))}
+        <div className="gnome-info">
+          <div className="gnome-age">
+            <h3>Age</h3>
+            <p>{age}</p>
+          </div>
+          <div className="profession">
+            <h3 className="profession-title">Professions:</h3>
+            <div>
+            {professions.map((profession, i) => (
+              <p className="profession-content" key={i}>{profession}</p>
+            ))}
+            </div>
+          </div>
+          
         </div>
       ) : null}
     </>

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import SingleProfile from "./SingleProfile/SingleProfile";
-import SearchComponent from "./SearchComponent";
-// import Profile from './Profile';
+import SingleProfile from "../SingleProfile/SingleProfile";
+import SearchComponent from "../SearchComponent/SearchComponent";
+import "./HomeComponent.scss";
 
-function Home() {
+function HomeComponent() {
   // These three hooks replace what you previously had in state when Home was still a class component
   const [displays, setDisplays] = useState([]);
   const [newInput, setNewInput] = useState("");
@@ -50,7 +50,7 @@ function Home() {
         <h1>HybridApp</h1>
         <SearchComponent searchInput={setNewInput} />
       </header>
-      <div>
+      <div className="gnome-container">
         {isLoading ? (
           <p>Loading gnomes...</p>
         ) : (
@@ -62,4 +62,4 @@ function Home() {
     </div>
   );
 }
-export default Home;
+export default HomeComponent;
