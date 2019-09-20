@@ -1,1 +1,10 @@
 @import "../variables";
+
+.searching-bar {
+  background: rgba(41, 35, 3, 0);
+  border-width: 0 0 1px;
+  height: auto;
+  padding: 3px 0 5px;
+  color: $textColor;
+  font-size: 13px;
+}

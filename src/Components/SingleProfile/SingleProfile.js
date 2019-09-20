@@ -18,7 +18,7 @@ function SingleProfile(props) {
       <div className="single-profile" onClick={() => setShowInfo(!showInfo)}>
         <p className="whiteBar-text">
           <strong>{name}</strong>
-          <span>Read More ></span>
+          {showInfo ? <span>Close</span> : <span>More Info ></span>}
         </p>
         <img className="gnome-img" src={thumbnail} alt="" />
       </div>

@@ -6,18 +6,31 @@ header {
   background: rgba(41, 35, 35, 0.89);
   @include flexCenter(column);
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   margin-bottom: 2px;
-
-  .searching-field {
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 25px;
-    outline: none;
-  }
 
   h1 {
     color: rgb(201, 189, 189);
+    margin: 18px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    @include flexCenter(row);
+  }
+  h1 {
+    font-size: 3em;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgb(182, 173, 173);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    @include flexCenter(row);
+  }
+  h1 {
+    font-size: 4.5em;
   }
 }

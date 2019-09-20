@@ -1,37 +1,64 @@
 @import "../variables";
 
 .gnome-img {
-  height: 200px;
   width: 100%;
+}
+.single-profile {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .gnome-info {
   width: 100%;
   @include flexCenter(row);
   opacity: 0.5;
-  margin:0;
   padding: 0;
-  position: inline-box;
-  
+
   h3 {
     font-size: 12px;
+    margin: 3px 0;
   }
-  
+
   p {
     font-size: 10px;
   }
 
-  .age-box {
-    margin-left: 10px;
-  }
-  
-  .age-box, .professions-box, .friends-box {
-    width: 150px;
-    height: 171px;
-    display: inline-flexbox;
-    // text-align: center;
+  .age-box,
+  .professions-box,
+  .friends-box {
+    width: 100px;
+    height: 140px;
     margin-right: 0;
-
+    display: flex;
+    flex-direction: column;
   }
-  
+}
+
+@media only screen and (min-width: 768px) {
+  .gnome-info h3 {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+  .gnome-info p {
+    font-size: 14px;
+  }
+  .gnome-info .age-box,
+  .gnome-info .professions-box,
+  .gnome-info .friends-box {
+    height: 220px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  p {
+    font-size: 30px;
+  }
+  .gnome-container .whiteBar-text span {
+    font-size: 15px;
+  }
 }

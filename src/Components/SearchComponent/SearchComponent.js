@@ -17,6 +17,7 @@ class SearchComponent extends Component {
       <div>
         <input
           type="text"
+          className="searching-bar"
           placeholder="Search by Name"
           value={this.state.inputSearch}
           onChange={this.handleSearchBar}

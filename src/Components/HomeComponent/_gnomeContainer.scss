@@ -15,8 +15,7 @@
     position: absolute;
     z-index: 1000;
     color: $textColor;
-    padding: 1em 20em 1em 0;
-    margin: 8em 0 0 0;
+    padding: 1em 0em 1em 0;
     background-color: rgba(0, 0, 0, 0.6);
   }
   span {
@@ -33,5 +32,17 @@
   &:hover img {
     -webkit-filter: blur(0);
     filter: blur(0);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gnome-container .whiteBar-text {
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .gnome-container .whiteBar-text {
+    height: 60px;
   }
 }
