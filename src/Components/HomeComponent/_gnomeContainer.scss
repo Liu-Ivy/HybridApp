@@ -37,12 +37,20 @@
 
 @media only screen and (min-width: 768px) {
   .gnome-container .whiteBar-text {
-    height: 60px;
+    height: 75px;
+    font-size: 28px;
+  }
+  .gnome-container span {
+    font-size: 15px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .gnome-container .whiteBar-text {
-    height: 60px;
+    height: 90px;
+    font-size: 32px;
+  }
+  .gnome-container span {
+    font-size: 23px;
   }
 }

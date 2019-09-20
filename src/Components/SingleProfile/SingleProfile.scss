@@ -10,14 +10,13 @@
 }
 
 .gnome-info {
-  width: 100%;
   @include flexCenter(row);
   opacity: 0.5;
-  padding: 0;
+  padding: 10px;
 
   h3 {
     font-size: 12px;
-    margin: 3px 0;
+    margin: 5px 0;
   }
 
   p {
@@ -48,7 +47,6 @@
   .gnome-info .friends-box {
     height: 220px;
   }
-
   p {
     font-size: 22px;
   }
