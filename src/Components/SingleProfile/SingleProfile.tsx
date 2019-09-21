@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "./SingleProfile.scss";
+import { Gnome } from "../HomeComponent/HomeComponent";
 
-function SingleProfile(props) {
+interface ProfileProps {
+  gnome: Gnome;
+}
+
+function SingleProfile(props: ProfileProps) {
   const {
     name,
     thumbnail,
@@ -22,7 +27,7 @@ function SingleProfile(props) {
         </p>
         <img className="gnome-img" src={thumbnail} alt="" />
       </div>
-      {showInfo ? (
+      {showInfo && (
         <div className="gnome-info">
           <div className="age-box">
             <h3>Age</h3>
@@ -34,18 +39,18 @@ function SingleProfile(props) {
           </div>
           <div className="professions-box">
             <h3>Professions</h3>
-            {professions.map((profession, i) => (
+            {professions.map((profession: string, i: number) => (
               <p key={i}>{profession}</p>
             ))}
           </div>
           <div className="friends-box">
             <h3>Friends</h3>
-            {friends.map((profession, i) => (
-              <p key={i}>{friends}</p>
+            {friends.map((friend: string, i: number) => (
+              <p key={i}>{friend}</p>
             ))}
           </div>
         </div>
-      ) : null}
+      )}
     </>
   );
 }
