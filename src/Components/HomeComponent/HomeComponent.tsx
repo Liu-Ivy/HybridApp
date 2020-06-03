@@ -23,7 +23,7 @@ let DEFAULT_GNOME = {
   professions: [],
   friends: [],
   hair_color: "",
-  height: ""
+  height: "",
 };
 
 function HomeComponent() {
@@ -50,7 +50,7 @@ function HomeComponent() {
   return (
     <div>
       <header>
-        <h1>HybridApp</h1>
+        <h1>InfoCheck</h1>
         <SearchComponent searchInput={setNewInput} newInput={newInput} />
       </header>
       <div className="gnome-container">
