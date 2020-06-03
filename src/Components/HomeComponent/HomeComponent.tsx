@@ -15,7 +15,7 @@ export interface Gnome {
   height: string;
 }
 
-let DEFAULT_GNOME: Gnome = {
+let DEFAULT_GNOME = {
   id: "",
   name: "",
   thumbnail: "",
